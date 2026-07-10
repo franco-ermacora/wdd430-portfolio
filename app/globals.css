@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a0a0a; /* Forzamos que la variable por defecto sea oscura */
-  --foreground: #ededed; /* Letras claras por defecto */
+  --background: #0a0a0a !important;
+  --foreground: #ffffff !important;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: #0a0a0a !important;
+  color: #ffffff !important;
 }
