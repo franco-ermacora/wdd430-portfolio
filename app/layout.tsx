@@ -1,6 +1,10 @@
 import "./globals.css";
+import { Inter } from 'next/font/google'; // 👈 AGREGÁ ESTA LÍNEA
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+
+// Configuración de la fuente
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Franco | Portfolio',
@@ -14,11 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-slate-50 text-slate-900 min-h-screen flex flex-col justify-between">
+      <body className={`${inter.className} bg-neutral-950 text-white min-h-screen flex flex-col`}>
         <Header />
-        <div className="flex-grow">
+        <main className="flex-grow">
           {children}
-        </div>
+        </main>
         <Footer />
       </body>
     </html>
