@@ -1,3 +1,6 @@
+
 export async function GET() {
-  return Response.json({ message: 'Hello from Next.js API!' });
-}
+
+return Response.json({ message: 'Hello from Next.js API!' });
+
+} 
