@@ -3,8 +3,7 @@ import { getProjects } from '@/lib/projects-db';
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
-  const type = searchParams.get('type'); // Esto lee si ponen ?type=opensource
-  
-  const filteredProjects = getProjects(type);
-  return NextResponse.json(filteredProjects);
+  const type = searchParams.get('type');
+  const projects = await getProjects(type);
+  return NextResponse.json(projects);
 }
